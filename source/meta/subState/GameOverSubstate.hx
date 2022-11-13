@@ -54,6 +54,10 @@ class GameOverSubstate extends MusicBeatSubState
 
 		PlayState.boyfriend.visible = false;
 
+		#if android
+		addVirtualPad(NONE, A_B);
+		#end	
+		
 		super();
 
 		Conductor.songPosition = 0;
