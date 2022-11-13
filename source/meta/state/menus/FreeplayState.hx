@@ -113,7 +113,7 @@ class FreeplayState extends MusicBeatState
 		// LOAD MUSIC
 		ForeverTools.playFreeplayMusic();
 
-		#if !html5
+		#if desktop
 		Discord.changePresence('FREEPLAY MENU', 'Main Menu');
 		#end
 
