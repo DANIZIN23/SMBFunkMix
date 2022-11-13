@@ -282,6 +282,11 @@ class PlayState extends MusicBeatState
 		allUIs.push(camHUD);
 		FlxCamera.defaultCameras = [camGame];
 
+		#if android
+		addAndroidControls();
+		androidControls.visible = true;
+		#end	
+		
 		// default song
 		if (SONG == null)
 			SONG = Song.loadFromJson('test', 'test');
@@ -2011,7 +2016,7 @@ class PlayState extends MusicBeatState
 
 	public static function updateRPC(pausedRPC:Bool)
 	{
-		#if !html5
+		#if desktop
 		var displayRPC:String = (pausedRPC) ? detailsPausedText : songDetails.toUpperCase();
 
 		if (health > 0 && gbHealth > 0)
