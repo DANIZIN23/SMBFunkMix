@@ -123,7 +123,7 @@ class Main extends Sprite
 
 	public static function main():Void
 	{
-		Lib.current.addChild(new Main());
+		
 	}
 
 	// calls a function to set the game up
@@ -176,8 +176,8 @@ class Main extends Sprite
 		Discord.changePresence('');
 		#end
 
-		// test initialising the player settings
-		PlayerSettings.init();
+		
+		
 
 		// if you're reading this in the future I've added my own FPS counter below! hopefully...
 		// yeah dw I'm getting started on it fffff
