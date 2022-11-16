@@ -53,13 +53,18 @@ class EpilogueState extends MusicBeatState
 		image.setGraphicSize(Std.int(image.width * 6));
 		image.updateHitbox();
 		add(image);
+	
+	#if android
+	addVirtualPad(NONE, A);
+	#end
+	
 	}
 
 	override function update(elapsed:Float)
 	{
 		super.update(elapsed);
 
-		var pressedEnter:Bool = FlxG.keys.justPressed.ENTER;
+		var pressedEnter:Bool = controls.ACCEPT;
 
 		var gamepad:FlxGamepad = FlxG.gamepads.lastActive;
 
