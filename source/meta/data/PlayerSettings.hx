@@ -39,7 +39,7 @@ class PlayerSettings
 	function new(id, scheme)
 	{
 		this.id = id;
-		
+		this.controls = new Controls('player$id', scheme);
 	}
 
 	public function setKeyboardScheme(scheme)
@@ -122,7 +122,7 @@ class PlayerSettings
 	{
 		if (player1 == null)
 		{
-			
+			player1 = new PlayerSettings(0, Solo);
 			++numPlayers;
 		}
 
