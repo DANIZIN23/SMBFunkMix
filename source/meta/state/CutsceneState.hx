@@ -137,7 +137,7 @@ class CutsceneState extends MusicBeatState
 		}
 
 		var layer1Json = Paths.file('images/cutscene/' + sceneNum + '/layer1.json');
-		var layer1Data = haxe.Json.parse(sys.io.File.getContent(layer1Json));
+		var layer1Data = haxe.Json.parse(Assets.getText(layer1Json));
 
 		var layer1FramesData = getFrameIndexesExpanded(layer1Data.frames);
 		layer1 = new FlxSprite();
