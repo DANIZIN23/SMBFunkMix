@@ -16,6 +16,7 @@ import android.flixel.FlxVirtualPad;
 import flixel.input.actions.FlxActionInput;
 import flixel.util.FlxDestroyUtil;
 #end
+
 /* 
 	Music beat state happens to be the first thing on my list of things to add, it just so happens to be the backbone of
 	most of the project in its entirety. It handles a couple of functions that have to do with actual music and songs and such.
@@ -36,7 +37,7 @@ class MusicBeatState extends FNFUIState
 
 	inline function get_controls():Controls
 		return PlayerSettings.player1.controls;
-
+	
 	#if android
 	var virtualPad:FlxVirtualPad;
 	var androidControls:AndroidControls;
@@ -135,7 +136,10 @@ class MusicBeatState extends FNFUIState
 			androidControls = null;
 		}
 		#end
-	}
+	}	
+	
+	
+
 	// class create event
 	override function create()
 	{
@@ -223,8 +227,8 @@ class MusicBeatSubState extends FlxSubState
 
 	inline function get_controls():Controls
 		return PlayerSettings.player1.controls;
-
-	#if android
+	
+		#if android
 	var virtualPad:FlxVirtualPad;
 	var trackedinputsUI:Array<FlxActionInput> = [];
 
@@ -276,6 +280,7 @@ class MusicBeatSubState extends FlxSubState
 		}
 		#end
 	}
+			
 	override function update(elapsed:Float)
 	{
 		// everyStep();
