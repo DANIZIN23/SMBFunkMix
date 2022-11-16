@@ -151,7 +151,7 @@ class CutsceneState extends MusicBeatState
 		add(layer1);
 		
 		var layer2Json = Paths.file('images/cutscene/' + sceneNum + '/layer2.json');
-		var layer2Data = haxe.Json.parse(sys.io.File.getContent(layer2Json));
+		var layer2Data = haxe.Json.parse(Assets.getText(layer2Json));
 
 		var layer2FramesData = getFrameIndexesExpanded(layer2Data.frames);
 		layer2 = new FlxSprite();
@@ -223,6 +223,8 @@ class CutsceneState extends MusicBeatState
 	{
 		var pressedEnter:Bool = FlxG.keys.justPressed.ENTER;
 
+		
+		
 		var gamepad:FlxGamepad = FlxG.gamepads.lastActive;
 
 		if (gamepad != null)
