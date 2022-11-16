@@ -28,7 +28,7 @@ class PlayerSettings
 	public var id(default, null):Int;
 
 	#if (haxe >= "4.0.0")
-	
+	public final controls:Controls;
 	#else
 	public var controls:Controls;
 	#end
